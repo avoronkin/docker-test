@@ -18,6 +18,6 @@ RUN /bin/bash -c ". /.nvm/nvm.sh && \
   ln -s /.nvm/$NODE_VERSION/bin/node /usr/bin/node && \
   ln -s /.nvm/$NODE_VERSION/bin/npm /usr/bin/npm"
 
-EXPOSE 3000
+RUN npm install -g nodemon
 
 WORKDIR /src
