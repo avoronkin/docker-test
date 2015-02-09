@@ -1,0 +1,11 @@
+nodejs:
+  build: .
+  volumes:
+    - .:/src
+  command: nodemon index.js
+  links:
+   - mongodb
+  ports:
+   - "3000:3000"
+mongodb:
+  image: mongo

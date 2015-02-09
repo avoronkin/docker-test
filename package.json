@@ -6,12 +6,13 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
-    "build-docker": "sudo docker build -t avoronkin/nodejs .",
-    "docker": "sudo docker run -v $(pwd):/src -p 127.0.0.1:3001:3001 -i -t avoronkin/nodejs /bin/bash"
+    "build-docker": "sudo fig build",
+    "docker": "sudo fig up"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.11.0"
+    "express": "^4.11.0",
+    "mongoose": "^3.8.23"
   }
 }
